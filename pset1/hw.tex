@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage[a4paper, margin=1in]{geometry}
+
+% \usepackage{amsmath}
+
+\title{EENG 203 - Week 1 Homework}
+\author{Bryan SebaRaj}
+\date{January 21, 2025}
+
+\begin{document}
+
+
+
+\maketitle
+
+\section*{Homework for January 14, 2025}
+
+\subsection*{7.3}
+
+\includegraphics[scale=0.3]{/Users/bryansebaraj/Downloads/IMG_2149.jpg}
+
+The circuit above is an RC circuit, comprised of a non-polarized capacitor and resistors. Therefore,
+
+$$\tau = RC$$
+$$R=10 k\Omega + (40 k\Omega || (20 k\Omega + 30 k\Omega))$$
+$$R=10 k\Omega + (40 k\Omega || 50 k\Omega)=10 k\Omega + \frac{40 k\Omega \cdot 50 k\Omega}{40 k\Omega + 50 k\Omega}$$
+$$R=32.22 \ k\Omega$$
+
+Substituting the values of $R$ and $C=100 pF$ into the equation for $\tau$,
+
+$$\tau = 32.22 k\Omega \cdot 100 pF = 3.222 \ \mu s$$
+
+\subsection*{7.22}
+
+\includegraphics[scale=0.3]{/Users/bryansebaraj/Downloads/IMG_2150.jpg}
+
+In an RL circuit, $i(t)=i(0)e^{-\frac{t}{\tau}}$, where $\tau = \frac{L}{R}$. Calculating $R$,
+
+$$R=(5\Omega || 20 \Omega) + 1 \Omega = \frac{5 \Omega \cdot 20 \Omega}{5 \Omega + 20 \Omega} + 1 \Omega = 5 \ \Omega$$
+
+Since $C=2$, $\tau = \frac{L}{R} = \frac{2}{5}$. Substituting $\tau$ and the given $i(0)=10 \ A$, 
+
+$$i(t)=10e^{-2.5t} \ A$$
+
+Using current division, $i_0=\frac{5}{5+20}(-i)=-\frac{i}{5}=-\frac{10e^{-2.5t}A}{5}=2e^{-2.5t} \ A$
+
+\section*{Homework for January 14, 2025}
+
+\subsection*{5.30}
+
+\includegraphics[scale=0.3]{/Users/bryansebaraj/Downloads/IMG_2151.jpg}
+
+The volate output, $v_0=v_i=1.2 V$
+
+The two parallel resistors, $R_1=20 k\Omega$ and $R_2 k\Omega$, can be combined to form a single resistor, 
+
+$$R_{eq}=(20 k\Omega || 30 k\Omega = \frac{20 k\Omega \cdot 20 k\Omega}{20 k\Omega + 30 k\Omega}=12 \ k\Omega$$
+
+By volatage division, 
+$$v_x=\frac{R_eq}{R_eq + 60 k\Omega}v_i=\frac{12 k\Omega}{12 k\Omega + 60 k\Omega}1.2 V=0.2 \ V$$
+
+$$i_x=\frac{v_x}{R}=\frac{0.2 V}{20 k\Omega}=10 \ \mu A$$
+
+$$p=\frac{v_x^2}{R}=\frac{(0.2 V)^2}{20 k\Omega}= 2 \ \mu W$$
+
+
+
+\subsection*{7.71}
+
+\includegraphics[scale=0.3]{/Users/bryansebaraj/Downloads/IMG_2152.jpg}
+
+Assuming that the op amp is noninverting, its gain can be calculated as
+
+$$A_v=1 + \frac{R_2}{R_1}=1+\frac{10 k\Omega}{10 k\Omega}=2$$
+
+Therefore, the Thevenin equivalent circuit (see below), has a voltage source
+
+$$V_{th}=A^v v_s = 2 \cdot 3 V = 6 \ V$$
+
+\includegraphics[scale=0.1]{/Users/bryansebaraj/Downloads/IMG_BEDC54EF3AFD-1.jpeg}
+
+$$v(t)=v_{Th}+[v(0)-v_{Th}]e^{-\frac{t}{\tau}}$$
+
+$$v(t)=6 + [0 + 6]e^{-\frac{t}{\tau}}=6(1-e^{-\frac{t}{\tau}}) \ V, \  \forall t > 0$$
+
+In an RC circuit, 
+$$\tau = RC=30 k\Omega \cdot \frac{1000 \Omega}{1 k\Omega} \cdot 10 \mu F \cdot \frac{1 F}{10^{-6}\mu F}=0.2 \ s$$
+
+Therefore, $v(t)=6(1-e^{-5t}) \ V, \  \forall t > 0$
+
+
+
+
+
+\end{document}
+
