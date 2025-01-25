@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.30)  18 JAN 2025 13:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.30)  18 JAN 2025 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -49,23 +49,6 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2025/01/07 v5.1.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip51
-\f@nch@offset@elh=\skip52
-\f@nch@offset@erh=\skip53
-\f@nch@offset@olh=\skip54
-\f@nch@offset@orh=\skip55
-\f@nch@offset@elf=\skip56
-\f@nch@offset@erf=\skip57
-\f@nch@offset@olf=\skip58
-\f@nch@offset@orf=\skip59
-\f@nch@height=\skip60
-\f@nch@footalignment=\skip61
-\f@nch@widthL=\skip62
-\f@nch@widthC=\skip63
-\f@nch@widthR=\skip64
-\@temptokenb=\toks19
 ) (/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
@@ -84,7 +67,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutheight=\dimen149
 \Gm@layouthoffset=\dimen150
 \Gm@layoutvoffset=\dimen151
-\Gm@dimlist=\toks20
+\Gm@dimlist=\toks19
 ) (/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
@@ -92,20 +75,20 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./hw.aux)
 \openout1 = `hw.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
  (/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -146,28 +129,28 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
 (/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 </Users/bryansebaraj/Downloads/IMG_2149.jpg, id=1, 596.2275pt x 327.2225pt>
 File: /Users/bryansebaraj/Downloads/IMG_2149.jpg Graphic file (type jpg)
 <use /Users/bryansebaraj/Downloads/IMG_2149.jpg>
-Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2149.jpg  used on input line 23.
+Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2149.jpg  used on input line 22.
 (pdftex.def)             Requested size: 178.86963pt x 98.1675pt.
 </Users/bryansebaraj/Downloads/IMG_2150.jpg, id=2, 607.26875pt x 347.2975pt>
 File: /Users/bryansebaraj/Downloads/IMG_2150.jpg Graphic file (type jpg)
 <use /Users/bryansebaraj/Downloads/IMG_2150.jpg>
-Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2150.jpg  used on input line 38.
+Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2150.jpg  used on input line 37.
 (pdftex.def)             Requested size: 182.18202pt x 104.19005pt.
 </Users/bryansebaraj/Downloads/IMG_2151.jpg, id=3, 517.935pt x 375.4025pt>
 File: /Users/bryansebaraj/Downloads/IMG_2151.jpg Graphic file (type jpg)
 <use /Users/bryansebaraj/Downloads/IMG_2151.jpg>
-Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2151.jpg  used on input line 54.
+Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2151.jpg  used on input line 53.
 (pdftex.def)             Requested size: 155.38168pt x 112.62161pt.
 
 
@@ -177,12 +160,12 @@ Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2151.jpg  used on inp
 </Users/bryansebaraj/Downloads/IMG_2152.jpg, id=21, 508.90125pt x 376.40625pt>
 File: /Users/bryansebaraj/Downloads/IMG_2152.jpg Graphic file (type jpg)
 <use /Users/bryansebaraj/Downloads/IMG_2152.jpg>
-Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2152.jpg  used on input line 73.
+Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_2152.jpg  used on input line 72.
 (pdftex.def)             Requested size: 152.67155pt x 112.92273pt.
 </Users/bryansebaraj/Downloads/IMG_BEDC54EF3AFD-1.jpeg, id=22, 1486.55376pt x 929.4725pt>
 File: /Users/bryansebaraj/Downloads/IMG_BEDC54EF3AFD-1.jpeg Graphic file (type jpg)
 <use /Users/bryansebaraj/Downloads/IMG_BEDC54EF3AFD-1.jpeg>
-Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_BEDC54EF3AFD-1.jpeg  used on input line 83.
+Package pdftex.def Info: /Users/bryansebaraj/Downloads/IMG_BEDC54EF3AFD-1.jpeg  used on input line 82.
 (pdftex.def)             Requested size: 148.66408pt x 92.95268pt.
 
 
@@ -195,15 +178,15 @@ L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2009 strings out of 475539
- 35179 string characters out of 5776665
+ 1707 strings out of 475539
+ 29813 string characters out of 5776665
  1933957 words of memory out of 5000000
- 24662 multiletter control sequences out of 15000+600000
+ 24364 multiletter control sequences out of 15000+600000
  565624 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,6n,65p,200b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on hw.pdf (3 pages, 603669 bytes).
+Output written on hw.pdf (3 pages, 605847 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
