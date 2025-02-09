@@ -1,6 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1739066879.81092 "hw.tex" "hw.pdf" "hw" 1739066880.26807 0
-  "/Users/bryansebaraj/Desktop/Screenshot 2025-02-08 at 7.20.13 PM.png" 1739060419.00044 183421 6c4d3d2b9309909e24e0902586be8550 ""
+["pdflatex"] 1739087832.23291 "hw.tex" "hw.pdf" "hw" 1739087832.66246 0
+  "/Users/bryansebaraj/Downloads/IMG_BEF698674C59-1.jpeg" 1739086117 480382 076e0c84145a13a327e80d2679c9838c ""
+  "/Users/bryansebaraj/Downloads/IMG_C2687C82924F-1.jpeg" 1739086174 474766 e583f47cf09cffb8ebd6a98c64cbb529 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -61,8 +62,8 @@
   "/Users/bryansebaraj/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724987660 92935 ab22f987f93038b61e05dc32d7c07157 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1724987687 6829296 8721aa43ee9a14915d884e1568411a02 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf.cnf" 1725035431.1561 708 85fd07691b6294ba94c59dbc62380410 ""
-  "hw.aux" 1739066880.18414 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "hw.tex" 1739066879.36773 2863 4a859d67105043de573e20b3ab751dc7 ""
+  "hw.aux" 1739087832.58466 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "hw.tex" 1739087830.82438 4634 9712e901a6a2fc96398bf9b02c45ffe3 ""
   (generated)
   "hw.aux"
   "hw.log"

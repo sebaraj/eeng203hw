@@ -65,14 +65,36 @@ $$2\pi f_c=\frac{R}{L}$$
 $$f_c=\frac{R}{2\pi L}=318.3 \text{ Hz} $$
 
 \subsection*{14.57}
-\includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-08 at 7.20.13 PM.png}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-08 at 7.20.13 PM.png}
 
 \begin{enumerate}[label=(\alph*)]
-    \item First, the input impedance can be calculated as $$Z(s)=R + \frac{\frac{1}{sC}\left(R + \frac{1}{sC} \right)}{\frac{1}{sC} + R + \frac{1}{sC}}$$
+    \item   \includegraphics[scale=0.1]{/Users/bryansebaraj/Downloads/IMG_BEF698674C59-1.jpeg} \\ 
+        First, the input impedance can be calculated as $$Z(s)=R + \frac{\frac{1}{sC}\left(R + \frac{1}{sC} \right)}{\frac{1}{sC} + R + \frac{1}{sC}}$$
         $$Z(s) = R+ \frac{RsC + 1}{sC \cdot sC \cdot \left( R + \frac{2}{SC}\right)}=R+\frac{RsC + 1}{2sC + s^2RC^2}$$
+        Recall that $$I=\frac{V_s}{Z}$$
+        $$I_1=\frac{\frac{1}{sC}}{\frac{1}{sC} + R + \frac{1}{sC}}I = \frac{V_s}{Z(sRC + 2)}=\frac{V_s}{\frac{1 + 3RsC + s^2R^2C^2}{sC}}=\frac{V_ssC}{1 + 3RsC + s^2R^2C^2}$$
+        $$V_o=I_1R=\frac{RV_ssC}{1 + 3RsC + s^2R^2C^2}$$
+        $$\frac{V_o}{V_s}=H(s)=\frac{RsC}{1 + 3RsC + s^2R^2C^2}$$
+        Dividing the numerator and denominator by $R^2C^2$,
+        $$H(s)=\frac{\frac{s}{RC}}{\frac{1}{R^2C^2} + \frac{3s}{RC} + s^2}$$
+        Rewriting to balance the $\frac{s}{RC}$ coefficient, 
+        $$H(s)=\frac{1}{3}\left( \frac{\frac{3s}{RC}}{\frac{1}{R^2C^2} + \frac{3s}{RC} + s^2} \right)$$
+        Therefore, $\omega^2_0=\frac{1}{R^2C^2}$, so $$\omega_0=\frac{1}{RC}=1 \text{ rad/s}$$
+        $$B_{\text{bandpass filter}}=\frac{3}{RC}= 3 \text{ rad/s}$$
 
 
-    \item
+    \item \includegraphics[scale=0.1]{/Users/bryansebaraj/Downloads/IMG_C2687C82924F-1.jpeg}
+        $$Z(s)=sL + \frac{R(R + sL)}{R + sL + R}=\frac{R^2 + 3sRL + s^2L^2}{2R+sL}$$
+        Recall that $$I=\frac{V_s}{Z}$$
+        $$I_1=\frac{R}{sL + 2R}I= \frac{V_sR}{Z(sL + 2R)}=\frac{V_sR}{R^2+3sRL+s^2L^2}$$
+        $$V_o=I_1sL=\frac{V_sRL}{R^2+3sRL+s^2L^2}$$
+        $$\frac{V_o}{V_s}=H(s)=\frac{R}{R^2+3sRL+s^2L^2}$$
+        Dividing the numerator and denominator by $L^2$,
+        $$H(s)=\frac{\frac{sR}{L}}{\frac{R^2}{L^2} + \frac{3sR}{L} + s^2}$$
+        Rewriting to balance the $\frac{sR}{L}$ coefficient,
+        $$H(s)=\frac{1}{3}\left( \frac{\frac{3sR}{L}}{\frac{R^2}{L^2} + \frac{3sR}{L} + s^2} \right)$$
+        Therefore, $\omega^2_0=\frac{R^2}{L^2}$, so $$\omega_0=\frac{R}{L}=1 \text{ rad/s}$$
+        $$B_{\text{bandpass filter}}=\frac{3R}{L}= 3 \text{ rad/s}$$
 \end{enumerate}
 
 
