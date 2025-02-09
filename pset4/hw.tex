@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+% \usepackage{fancyhdr}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+% \usepackage{amsmath}
+
+\title{Week 4 Homework}
+\author{Bryan SebaRaj \\[0.7em] Professor Hong Tang \\[0.7em]  EENG 203 - Circuits and System Design}
+\date{February 11, 2025}
+\begin{document}
+
+
+
+\maketitle
+
+\section*{Homework for February 4, 2025}
+
+\subsection*{14.35}
+% \includegraphics[scale=0.4]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-08 at 7.18.47 PM.png}
+
+In a parallel RLC circuit,
+
+\begin{enumerate}[label=(\alph*)]
+    \item $\omega_o=\frac{1}{\sqrt{LC}}=\frac{1}{8 mH \cdot 60 \mu F}=1443.38$ rad/s
+    \item $B=\frac{1}{RC}=\frac{1}{5 k\Omega \cdot 60 \mu F}=3.33$ rad/s
+    \item $Q=\omega_oRC=1443.38 \text{ rads/s } \cdot 5 k\Omega \cdot 60 \mu F =  433.01$
+\end{enumerate}
+
+\subsection*{14.40}
+% \includegraphics[scale=0.4]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-08 at 7.19.04 PM.png}
+
+In a parallel resonance circuit,
+
+\begin{enumerate}[label=(\alph*)]
+    \item From $B=\frac{1}{RC}$, $$C=\frac{1}{BR}=\frac{1}{(\omega_2-\omega_1)R}=\frac{1}{2\pi(f_2-f_1)R}=\frac{1}{2\pi(4 kHz) \cdot 2 k\Omega}=19.894 \text{ nF}$$
+\item From $\omega_0=\frac{1}{\sqrt{LC}}$, $$L=\frac{1}{\omega^2_oC}=\frac{1}{\left( \frac{\omega_1+\omega_2}{2}\right)^2 \cdot C}=\frac{1}{\left( 2\pi f_0 \cdot \right)^2 \cdot C}=164.42 \mu H$$
+\item $\omega_0=\frac{\omega_1+\omega_2}{2}=2\pi\frac{f_1+f_2}{2}=2\pi \cdot 88 kHz=552.92$ krad/s
+\item $B=\omega_2-\omega_1= 2\pi (f_2-f_1)=8\pi$ krad/s = 25.13 krad/s
+\item $Q=\frac{\omega_0}{B}=\frac{176\pi}{8\pi}=22$
+\end{enumerate}
+
+
+
+\section*{Homework for February 6, 2025}
+
+\subsection*{14.50}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-08 at 7.19.45 PM.png}
+
+Note that $H(\omega)=\frac{V_o}{V_i}=\frac{j\omega L}{R + j\omega L}$
+
+$H(0)=\frac{0}{R + 0}=0$ and $H(\infty)=\frac{j\infty L}{R + j\infty L}=1$. Therefore, the given circuit is a high pass filter.
+
+Calculating the corner frequency, using $H(\omega_c)=\frac{1}{\sqrt{2}}$,
+$$H(\omega_c)=\frac{1}{\sqrt{1+\left(\frac{R}{\omega_cL}\right)^2}}$$
+$$\sqrt{1+\left(\frac{R}{\omega_c L}\right)^2} = \sqrt{2}$$
+$$\frac{R}{\omega_cL} = \sqrt{1}=1$$
+$$\omega_c=\frac{R}{L}$$
+$$2\pi f_c=\frac{R}{L}$$
+$$f_c=\frac{R}{2\pi L}=318.3 \text{ Hz} $$
+
+\subsection*{14.57}
+\includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-08 at 7.20.13 PM.png}
+
+\begin{enumerate}[label=(\alph*)]
+    \item First, the input impedance can be calculated as $$Z(s)=R + \frac{\frac{1}{sC}\left(R + \frac{1}{sC} \right)}{\frac{1}{sC} + R + \frac{1}{sC}}$$
+        $$Z(s) = R+ \frac{RsC + 1}{sC \cdot sC \cdot \left( R + \frac{2}{SC}\right)}=R+\frac{RsC + 1}{2sC + s^2RC^2}$$
+
+
+    \item
+\end{enumerate}
+
+
+
+
+\end{document}
+
