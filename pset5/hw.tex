@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+% \usepackage{fancyhdr}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+% \usepackage{amsmath}
+
+\title{Week 5 Homework}
+\author{Bryan SebaRaj \\[0.7em] Professor Hong Tang \\[0.7em]  EENG 203 - Circuits and System Design}
+\date{February 18, 2025}
+\begin{document}
+
+
+
+\maketitle
+
+\section*{Homework for February 11, 2025}
+
+\subsection*{14.61}
+% \includegraphics[scale=0.5]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-16 at 2.20.40 PM.png}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Note that in this active filter, $$V_o=V_- \text{ and } V_+=
+        V_i \frac{\frac{1}{j\omega C}}{R+\frac{1}{j \omega C}}$$
+        Recall that $V_+=V_-$. As such, 
+        $$V_i \frac{\frac{1}{j\omega C}}{R+\frac{1}{j \omega C}}=V_o$$
+        Thus, $$H(\omega)=\frac{V_o}{V_i}=\frac{j\omega C}{j\omega C}\cdot \frac{\frac{1}{j\omega C}}{R+\frac{1}{j \omega C}}=\frac{1}{j\omega RC + 1}$$
+    \item Note that in this active filter, $$V_o=V_- \text{ and } V_+=V_i\frac{R}{R + \frac{1}{j\omega C}}$$
+        Recall that $V_+=V_-$. As such,
+        $$V_i\frac{R}{R + \frac{1}{j\omega C}}=V_o$$
+        Thus, $$H(\omega)=\frac{V_o}{V_i}=\frac{j\omega C}{j \omega C} \cdot \frac{R}{R + \frac{1}{j\omega C}}=\frac{j\omega RC}{j\omega RC + 1}$$
+\end{enumerate}
+
+
+\subsection*{14.66}
+\includegraphics[scale=0.8]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-16 at 2.21.03 PM.png}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Let the node between $R_3$ and $R_4$ be denoted with a voltage $v_a$, the non-inverting input as $v_+$ and the inverting input as $v_-$. 
+        Trivially, $v_+=v_a$
+    \item Note that in order to operate as a high pass filter, $H(s)$ must take the form with some constant $K$,
+        $$H(s)=K\cdot \frac{sR_fC}{sR_iC + 1}$$
+        Rewriting $H(s)$, $$H(s)=\frac{R_4}{R_3 + R_4} \times \frac{R_2C}{R_2C} \times \frac{s + (1/R_1C)[R_1/R_2 - R_3/R_4]}{s + 1/R_2C}=\frac{R_4}{R_3 + R_4} \times \frac{sR_2C + (R_2/R_1)[R_1/R_2 - R_3/R_4]}{sR_2C + 1}$$
+        When $\frac{R_1}{R_2}=\frac{R_4}{R_4}$, $H(s)$ takes the form,
+        $$H(s)=\frac{R_4}{R_3 + R_4} \times \frac{sR_2C + 0}{sR_2C + 1}=\frac{R_4}{R_3 + R_4} \times \frac{sR_2C}{sR_2C + 1}$$
+        Thus, in order for this circuit to act as a high pass filter, $\frac{R_1}{R_2}=\frac{R_3}{R_4}$.
+        This can be confirmed as $H(0)=0$ and $H(\infty)=1$.
+    \item 
+        % To operate as a lowpass filter, $H(s)$ must take the form,
+        % $$H(s)=K \frac{1}{sR_2C + 1}$$
+        Using the previous intermerdiate form, $$H(s)=\frac{R_4}{R_3 + R_4} \times \frac{sR_2C + (R_2/R_1)[R_1/R_2 - R_3/R_4]}{sR_2C + 1}$$
+        At $s=0$, $$H(0)=\frac{R_4}{R_3 + R_4} \times \frac{0 + (R_2/R_1)[R_1/R_2 - R_3/R_4]}{0 + 1}=\frac{R_4}{R_3 + R_4} (R_2/R_1)(R_1/R_2 - R_3/R_4)$$
+        Therefore in order to yield a nonzero DC gain at at $s=0$, $$\frac{R_1}{R_2} \neq \frac{R_3}{R_4}$$
+        In order for $H(\infty)=0$, see that $R_3\rightarrow \infty$, which would yield,
+        $$H(\infty)=0$$
+        Thus, the circuit will act as a low pass filter.
+
+\end{enumerate}
+
+
+\section*{Homework for February 13, 2025}
+
+\subsection*{14.95}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-16 at 2.21.15 PM.png}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Recall that a circuit with a variable capacitor and antenna coil uses the formula, 
+        $$f=\frac{1}{2\pi \sqrt{LC}}$$
+        At $C=40 \text{ pF}$, $$f=\frac{1}{2\pi \sqrt{240 \mu H \cdot 40 pF}}=1.6244 \text{ MHz}$$
+        At $C=360 \text{ pF}$, $$f=\frac{1}{2\pi \sqrt{240 \mu H \cdot 360 pF}}=0.5415 \text{ MHz}$$
+        Thus, the circuit can tune for any frequency between $0.5415 \text{ MHz}$ and $1.6244 \text{ MHz}$.
+    \item In order to calculate $Q$, recall that the formula for $Q$ is,
+        $$Q=\frac{2\pi f L}{R}$$
+        At $f_1=0.5415 \text{ MHz}$, $$Q=\frac{2\pi \cdot 0.5415 \text{ MHz} \cdot 240 \mu H}{12 \Omega}=68.047$$
+        At $f_2=1.6244 \text{ MHz}$, $$Q=\frac{2\pi \cdot 1.6244 \text{ MHz} \cdot 240 \mu H}{12 \Omega}=204.128$$
+
+\end{enumerate}
+
+
+\subsection*{14.96}
+\includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-16 at 2.21.21 PM.png}
+
+
+
+
+\end{document}
+
