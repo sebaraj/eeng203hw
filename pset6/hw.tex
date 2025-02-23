@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+% \usepackage{fancyhdr}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+% \usepackage{amsmath}
+
+\title{Week 6 Homework}
+\author{Bryan SebaRaj \\[0.7em] Professor Hong Tang \\[0.7em]  EENG 203 - Circuits and System Design}
+\date{February 25, 2025}
+\begin{document}
+
+
+
+\maketitle
+
+\section*{Homework for February 18, 2025}
+
+\subsection*{15.5}
+% \includegraphics[scale=0.5]{}
+
+\subsection*{15.8}
+% \includegraphics[scale=0.5]{}
+
+\subsection*{15.9}
+% \includegraphics[scale=0.5]{}
+
+\section*{Homework for February 20, 2025}
+
+\subsection*{15.21}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-22 at 10.36.00 PM.png}
+
+Let the period be $T=2\pi$.
+From inspection, $$f_1(t) = (1 - \frac{t}{2\pi})(u(t)-i(t-2\pi))=u(t) - \frac{t}{2\pi}u(t) + \frac{t - 2\pi}{2\pi}u(t- 2\pi)$$
+
+Using the common functions of a Laplace transform,
+
+$$\mathcal{L}\{f_1(t)\} = F_1(s) = \frac{1}{s} - \frac{1}{2\pi s^2} + \frac{e^{-2\pi s}}{2\pi s^2} = \frac{2\pi s - 1 + e^{-2\pi s}}{2\pi s^2}$$
+
+Projecting the Laplace transform from a single period to the entire function, 
+
+$$F(s) = \frac{F_1(s)}{1 - e^{-2\pi s}}=\frac{2\pi s - 1 + e^{-2\pi s}}{2\pi s^2 - 2\pi s^2 e^{-2\pi s}}$$
+
+\subsection*{15.22}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-22 at 10.36.07 PM.png}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Let the period be $T=1$.
+        From inspection, $$g_1(t)  = 2t(u(t)-u(t-1)) = 2tu(t)-2(tu(t-1))=2tu(t)+2u(t-1)-2(t-1)u(t-1)$$
+        Using the common functions of a Laplace transform,
+        $$\mathcal{L}\{g_1(t)\} = G_1(s) = \frac{2}{s^2} + \frac{2e^{-s}}{s} - \frac{2e^{-s}}{s^2} = \frac{2 + 2se^{-s} - 2e^{-s}}{s^2}$$
+        Projecting the Laplace transform from a single period to the entire function,
+        $$G(s) = \frac{G_1(s)}{1 - e^{-s}} = \frac{2 + 2se^{-s} - 2e^{-s}}{s^2 - s^2 e^{-s}}$$
+    \item Let the period be $T=2$. Define the periodic triangular wave as $h_0$, where $h=h_0 + u(t)$.
+        From inspection, $$h_1(t) = 2tu(t)+2(1-2t)u(t-1)+2u(t-1) +2(t-2)u(t-2)= 2tu(t) + 4u(t-1) - 4tu(t-1)+2(t-2)u(t-2)$$
+        $$=2tu(t)  - 4(t-1)u(t-1)+2(t-2)u(t-2)$$
+        Using the common functions of a Laplace transform,
+        $$\mathcal{L}\{h_1(t)\} = H_1(s) = \frac{2}{s^2} - \frac{4e^{-s}}{s^2} + \frac{2e^{-2s}}{s^2}= \frac{2  - 4e^{-s}+2e^{-2s}}{s^2}=\frac{2(1-e^{-s})^2}{s^2}$$
+        Finding $H_0$,
+        $$H_0(s) = \frac{2(1-e^{-s})^2}{s^2(1-e^{-2s})}$$
+        Projecting the Laplace transform from a single period to the entire function,
+        $$H(s) = \frac{2(1-e^{-s})^2}{s^2(1-e^{-2s})} + \frac{1}{s}$$
+
+\end{enumerate}
+
+
+\subsection*{15.27}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-22 at 10.36.18 PM.png}
+
+\begin{enumerate}[label=(\alph*)]
+    \item Trivially using the reverse transforms, 
+        $$f(t) = \mathcal{L}^{-1}\{F(s)\} = u(t) + 2e^{-t}u(t)$$
+    \item See that $$G(s)=\frac{3(s+4)-11}{s+4}= 3 - \frac{11}{s+4}$$
+        $$g(t) = \mathcal{L}^{-1}\{G(s)\} = 3\delta(t) - 11e^{-4t}u(t)$$
+    \item See that $$H(s)=\frac{A}{s+1}+\frac{B}{s+3}, \quad \exists A,B \in \mathbb{Z}$$
+        The poles of $H(s)$ can be calculated as 
+        $$A=(s+1)H(s)\big|_{s=-1}=2$$
+        $$B=(s+3)H(s)\big|_{s=-3}=-2$$
+        Thus, $$H(s)=\frac{2}{s+1}-\frac{2}{s+3}$$
+        $$h(t) = \mathcal{L}^{-1}\{H(s)\} = 2e^{-t}u(t) - 2e^{-3t}u(t)$$
+    \item See that $$J(s)=\frac{A}{s+2}+\frac{B}{(s+2)^2}+\frac{C}{s+4}, \quad \exists A,B,C \in \mathbb{Z}$$
+        The poles of $J(s)$ can be calculated as 
+        $$B=(s+2)^2J(s)\big|_{s=-2}=6$$
+        $$C=(s-4)J(s)\big|_{s=4}=3$$
+        Note that $A$ canot be determined in this manner, so we can multiply both sides of $J(s)$ by $(s+2)^2(s+4)$ and rewrite it as
+        $$12=A(s+2)(s+4)+B(s+4)+C(s+2)^2$$
+        Substituting in $B$ and $C$,
+        $$12=A(s+2)(s+4)+6(s+4)+3(s+2)^2$$
+        Without expanding, we can see that $A=-3$. Thus,
+        $$J(s)=\frac{-3}{s+2}+\frac{6}{(s+2)^2}+\frac{3}{s+4}$$
+        $$j(t) = \mathcal{L}^{-1}\{J(s)\} = -3e^{-2t}u(t) + 6te^{-2t}u(t) + 3e^{-4t}u(t)$$
+
+\end{enumerate}
+
+
+
+\subsection*{15.30}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-22 at 10.36.23 PM.png}
+
+\begin{enumerate}[label=(\alph*)]
+    \item See that we can split up $F_1(s)$ such that $$F_1(s)=\frac{A}{s} + \frac{Bs+C}{s^2+2s+5}$$
+        Multiplying both sides by $s(s^2+2s+5)$, we get
+        $$6s^2+8s+3 = A(s^2+2s+5)+Bs^2+Cs$$
+        Setting the coefficients of both sides equal to each other, see that
+        $$\text{for } s^2, 6 = A + B$$
+        $$\text{for } s^1, 8 = 2A + C$$
+        $$\text{for } s^0, 3 = 5A$$
+        Thus, $A=\frac{3}{5}$, $B=\frac{27}{5}$, and $C=\frac{34}{5}$.
+        Substituting back into $F_1(s)$,
+        $$F_1(s)=\frac{3}{5s} + \frac{27s+34}{5(s^2+2s+5)}=\frac{3}{5s}+\frac{27(s+1)+7}{5[(s+1)^2 + 4]}$$
+        $$f_1(t)=\frac{3}{5}+\frac{27}{5}e^{-t}cos(2t)+\frac{7}{5}s^{-t}sin(2t)$$
+    \item Splitting up $F_2(s)$, $$F_2(s)=\frac{A}{s+1}+\frac{B}{(s+1)^2}+\frac{C}{s+4}$$
+        Multiplying both sides by $(s+1)^2 (s+4)$, we get
+        $$6s^2+8s+3 = A(s+1)(s+4)+B(s+4)+C(s+1)^2$$
+        Setting the coefficients of both sides equal to each other, see that
+        $$\text{for } s^2, 1 = A+C$$
+        $$\text{for } s^1, 5 = 5A+B+2C$$
+        $$\text{for } s^0, 6 = 4A+4B+C$$
+        Solving the system of equations, 
+        $$14=16A+7C$$
+        $$7=9A$$
+        $$A=\frac{7}{9}, C=\frac{2}{9}, B = \frac{2}{3}$$
+        Substituting back into $F_2(s)$,
+        $$F_2(s)=\frac{7}{9(s+1)}+\frac{2}{3(s+1)^2}+\frac{2}{9(s+4)}$$
+        $$f_2(t)=\frac{7}{9}e^{-t}u(t)+\frac{2}{3}te^{-t}u(t)+\frac{2}{9}e^{-4t}u(t)$$
+    \item Splitting up $F_3(s)$, $$F_3(s)=\frac{A}{s+1}+\frac{Bs+C}{s^2+4s+8}$$
+        Multiplying both sides by $(s+1)(s^2+4s+8)$, we get
+        $$10 = A(s^2+4s+8)+Bs^2+Bs+Cs+C$$
+        Setting the coefficients of both sides equal to each other, see that
+        $$\text{for } s^2, 0 = A+B$$
+        $$\text{for } s^1, 0 = 4A+B+C$$
+        $$\text{for } s^0, 10 = 8A+C$$
+        Solving the system of equations,
+        $$3A+C=0$$
+        $$5A=10$$
+        $$A=2, B=-2, C=-6$$
+        Substituting back into $F_3(s)$,
+        $$F_3(s)=\frac{2}{s+1}-\frac{2s+6}{s^2+4s+8}$$
+        $$=\frac{2}{s+1}-\frac{2(s+1)}{(s+1)^2+4}-\frac{4}{(s+1)^2 + 4}$$
+        $$f_3(t)=2e^{-t}u(t)-2e^{-t}cos(2t)u(t) - 2e^{-t}sin(2t)u(t)$$
+\end{enumerate}
+
+
+
+
+\end{document}
+
