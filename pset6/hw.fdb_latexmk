@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1740348940.11013 "hw.tex" "hw.pdf" "hw" 1740348940.46942 0
+["pdflatex"] 1740368128.16701 "hw.tex" "hw.pdf" "hw" 1740368128.50297 0
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -27,6 +27,7 @@
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -59,8 +60,8 @@
   "/Users/bryansebaraj/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724987660 92935 ab22f987f93038b61e05dc32d7c07157 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1724987687 6829296 8721aa43ee9a14915d884e1568411a02 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf.cnf" 1725035431.1561 708 85fd07691b6294ba94c59dbc62380410 ""
-  "hw.aux" 1740348940.39597 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "hw.tex" 1740348939.01564 6572 977f27931014b529e67686d970d840a3 ""
+  "hw.aux" 1740368128.42604 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "hw.tex" 1740368126.87694 7211 63f5fa7bbec3071bf81fef52f2d62951 ""
   (generated)
   "hw.aux"
   "hw.log"
