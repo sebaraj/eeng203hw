@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+% \usepackage{fancyhdr}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+% \usepackage{amsmath}
+
+\title{Week 7 Homework}
+\author{Bryan SebaRaj \\[0.7em] Professor Hong Tang \\[0.7em]  EENG 203 - Circuits and System Design}
+\date{March 4, 2025}
+\begin{document}
+
+
+
+\maketitle
+
+\section*{Homework for February 25, 2025}
+
+\subsection*{16.13}
+\includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-28 at 4.32.40 PM.png}
+
+Given the circuit show in Figure 16.36, suppose that $v_s=4u(t)$, $L=1$ H, the capacitor $C$ is equivalent to $C= \frac18$ H, $R_1=2$ $\Omega$, and $R_2=4$ $\Omega$. Find $v_x$
+
+We first calculate
+
+$$\frac{V_x - \frac4s}{s}+\frac{V_x}{2}+\frac{V_x}{4+\frac8s}=0$$
+
+Multiplying by $s(4s+8)$, we get
+
+$$V_x(4s+8) - \frac{16s+32}{s}+V_x(s(2s+4)) + V_xs^2$$
+
+$$V_x(3s^2 + 8s + 8) = \frac{16s+32}{s}$$
+
+$$V_x = \frac{16s+32}{s(3s^2 + 8s + 8)}$$
+
+Separating into partial fractions, we get
+
+$$V_x = 16\left(\frac{A}{s} + \frac{B}{s + \left( \frac{4 + j\sqrt{8}}{3} \right)} + \frac{C}{s + \left( \frac{4 - j\sqrt{8}}{3} \right)}\right)$$
+
+Solving for $A$, $B$, and $C$, we get
+
+$$A = \frac{1}{4}$$
+
+$$B = -\frac18$$
+
+$$C = -\frac18$$
+
+Therefore,
+
+$$V_x = \frac{4}{s} - \frac{2}{s + \left( \frac{4 + j\sqrt{8}}{3} \right)} - \frac{2}{s + \left( \frac{4 - j\sqrt{8}}{3} \right)}$$
+
+Taking the inverse Laplace transform, we get
+
+$$v_x = 4u(t) - 4e^{-\frac43t}\cos\left(\frac{2\sqrt{2}}{3}t\right)u(t) \ \text{V}$$
+
+
+
+
+\subsection*{16.15}
+\includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-28 at 4.32.58 PM.png}
+
+\includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-02-28 at 4.33.07 PM.png}
+
+Let $R_o = R || 60$ $\Omega$. Converting the circuit to the $s-domain$, 
+
+$$T(s) = R_o + \frac{1}{0.01s} + 4s = R_o + \frac{100}{s} + 4s= \frac{4s^2 + sR_o + 100}{s}$$
+
+Therefore, 
+$$s_\pm = \frac{-R_o \pm \sqrt{R_o - 1600}}{2}$$
+
+the system is critically damped when $R_o = 40$. 
+
+$$R_0 = \frac{R \times 60}{R + 60}$$
+
+$$20R = 2400$$
+
+$$R = 120 \ \Omega$$
+
+\end{document}
