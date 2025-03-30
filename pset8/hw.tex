@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+% \usepackage{fancyhdr}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+% \usepackage{amsmath}
+
+\title{Week 8 Homework}
+\author{Bryan SebaRaj \\[0.7em] Professor Hong Tang \\[0.7em]  EENG 203 - Circuits and System Design}
+\date{April 3, 2025}
+\begin{document}
+
+
+\maketitle
+
+\section*{Homework for March 27, 2025}
+
+\subsection*{16.35}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-03-29 at 4.25.29 PM.png}
+
+
+For $t<0$, the capacitor and inducotr are in a steady state at 0 as the circuit is unexicted. Transforming the given circuit yeilds
+
+\begin{center}
+    \includegraphics[scale=0.15]{/Users/bryansebaraj/Downloads/IMG_169210321C82-1.jpeg}
+\end{center}
+
+\[
+    \frac{V_o - \frac{10}{s+1}}{s} + \frac{2s(V_o - 0)}{1} + \frac{V_o - 0}{4} - \frac{3}{s} = 0
+\]
+
+\[
+\left( \frac{1}{s} + 2s + \frac14 \right)V_o = \frac{10}{s(s+1)} + \frac{3}{s}
+\]
+
+Solving for $V_o$ yields
+
+\[
+2 \left( \frac{s^2 + 0.125s + 0.5}{s} \right)V_o = \frac{3s + 13}{s(s+1)}
+\]
+\[
+V_o = \frac{1.5s + 6.5}{(s^2 + 0.125s + 0.5)(s+1)}
+\]
+
+Find the roots of $s^2 + 0.125s + 0.5$,
+
+\[
+s_{1,2} = \frac{-0.125 \pm \sqrt{0.015625 - 2}}{2} = \frac{-0.125 \pm \sqrt{-1.984375}}{2} = -0.0625 \pm j0.70435
+\]
+
+Substituting those roots back into $V_o$ yields
+
+\[
+V_o = \frac{1.5s + 6.5}{(s + 1)(s + 0.0625 + j0.70435)(s + 0.0625 - j0.70435)}
+\]
+
+\[
+= \frac{A}{s + 1} + \frac{B}{s + 0.0625 + j0.70435} + \frac{C}{s + 0.0625 - j0.70435}
+\]
+
+where
+\[
+A = \frac{1.5s + 6.5}{(s + 0.0625 + j0.70435)(s + 0.0625 - j0.70435)}\Bigg|_{s = -1} = \frac{5}{1.375} = 3.636
+\]
+
+\[
+B = \frac{(1.5(-0.0625 + j0.70435) + 6.5)}{(-0.0625 + j0.70435 + 1)(-1.4087)} = \frac{6.40625 - j1.08625}{(0.9375 + j0.70435)(-1.4087)}
+\]
+
+\[
+= \frac{(6.49272 \angle -9.36497^\circ)}{(1.17261 \angle 36.9178^\circ)(1.4087 \angle -90^\circ)} = 3.9306 \angle 117.553^\circ
+\]
+
+\[
+C = \frac{(1.5(-0.0625 - j0.70435) + 6.5)}{(-0.0625 - j0.70435 + 1)(-1.4087)} = \frac{6.40625 + j1.056525}{(0.9375 - j0.70435)(-1.4087)}
+\]
+
+\[
+= \frac{6.49272 \angle 9.36497^\circ}{(1.17261 \angle -36.9178^\circ)(1.4087 \angle 90^\circ)} = 3.9306 \angle -117.553^\circ
+\]
+
+Thus,
+
+\[
+v_o(t) = (3.636 e^{-t} + 3.9306 e^{-0.0625t}e^{j117.559^\circ} e^{-j0.7044t} + 3.9306 e^{-0.0625t}e^{-j117.559^\circ} e^{j0.7044t})u(t) \text{ V}
+\]
+%
+% or
+%
+% \[
+% [3.636 e^{-t} + 7.862 e^{-0.0625t} \cos(0.7044t - 117.55^\circ)]u(t) \text{ volts}
+% \]
+
+\subsection*{16.44}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-03-29 at 4.25.41 PM.png}
+
+First note the initial conditions. For $t<0$, the inductor functions as a short circuit, yielding $v_c(0)=0$ and $i(0)=3$ A.
+
+\noindent Also see that this circuit can be simplified and transformed into: 
+
+\begin{center}
+\includegraphics[scale=0.12]{/Users/bryansebaraj/Downloads/IMG_20410D708226-1.jpeg}
+\end{center}
+
+\noindent Solving for $V$ and $I$ in the above circuit yields the following:
+
+$$-\frac9s + \frac{V}{\frac{100}{s}}+\frac{V}{8} + \frac{V}{4s} + \frac3s = 0$$
+
+    $$I=\frac{V}{4s} + \frac3s$$
+
+
+$$\frac6s = \left[\frac{s}{100} + \frac18 \frac{1}{4s}\right] \text{ V} = \frac{s^2 + 12.5s + 25}{100 s} \text{ V}$$
+
+$$V(s)=\frac{600}{(s+2.5)(s+10)}$$
+
+\noindent Therefore, $$I(s)=\frac{150}{s(s+2.5)(s+10)} + \frac3s=\frac{150 + 3(s+2.5)(s+10)}{s(s+2.5)(s+10)}$$
+
+\noindent Performing partial fraction expansion and reconverting back into the time domain yields:
+
+$$I(s)=\frac{A}{s} + \frac{B}{s+2.5} + \frac{C}{s+10}$$
+
+$$A=(s)I(s)|_{s=0} = \frac{150 + 75}{25} = 9$$
+$$B=(s+2.5)I(s)|_{s=-2.5} = \frac{150 + 0}{-2.5 * 7.5} = -8$$
+$$C = (s+10)I(s)|_{s=-10} = \frac{150 + 0}{-10 * -7.5} = 2$$
+\noindent Therefore, $$I(s)=\frac9s - \frac{8}{s+2.5} + \frac{2}{s+10}$$
+\noindent Thus, $$i(t) = \mathbb{L}\{I(s)\}= u(t) \left( 9 - 8e^{-2.5t} + 2e^{-10t}\right) \text{ A}$$
+
+
+\section*{Homework for April 1, 2025}
+
+\subsection*{16.96}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-03-29 at 4.26.02 PM.png}
+
+Given that $V_o$ is the voltage across $R$, KCL yields
+$$I_s=\frac{V_o}{R} + sCV_o + \frac{V_o}{sL}=V_o \left(\frac{1}{R} + sC + \frac{1}{sL}\right)$$
+Solving for $V_o$,
+$$V_o=\frac{I_s}{\frac{1}{R} + sC + \frac{1}{sL}}$$
+$$V_o=\frac{sLI_sR}{sL + R + s^2LRC}$$
+
+Given that $I_o = \frac{V_o}{R}$, 
+$$I_o=\frac{sLI_s}{sL + R + s^2LRC}$$
+$$H(s) = \frac{I_o}{I_s}=\frac{sL}{sL + R + s^2LRC}=\frac{\frac{s}{RC}}{s^2 + \frac{s}{RC} + \frac{1}{LC}}$$
+
+This yields the following roots:
+
+$$s_{1,2} = \frac{-\frac{1}{RC} \pm \sqrt{\left(\frac{1}{RC}\right)^2 - 4\left(\frac{1}{LC}\right)}}{2}=-\frac{1}{2RC} \pm \sqrt{\left(\frac{1}{2RC}\right)^2 - \left(\frac{1}{LC}\right)}$$
+
+Given that R, L, and C are positive, the roots $s_1$ and $s_2$ must be negative.
+Therefore, the system is stable.
+
+\end{document}
+
