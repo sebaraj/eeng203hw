@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743294510.04478 "hw.tex" "hw.pdf" "hw" 1743294510.44277 0
+["pdflatex"] 1743490435.12064 "hw.tex" "hw.pdf" "hw" 1743490435.51291 0
   "/Users/bryansebaraj/Downloads/IMG_169210321C82-1.jpeg" 1743294482 305221 bdd66d9520ac4e133ed856da931392cb ""
   "/Users/bryansebaraj/Downloads/IMG_20410D708226-1.jpeg" 1743290302 426157 047b1d2ff3b1b5e5fcf6a6821dfb0d7c ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -30,11 +30,10 @@
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
-  "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -64,8 +63,8 @@
   "/Users/bryansebaraj/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724987660 92935 ab22f987f93038b61e05dc32d7c07157 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1724987687 6829296 8721aa43ee9a14915d884e1568411a02 ""
   "/Users/bryansebaraj/Library/TinyTeX/texmf.cnf" 1725035431.1561 708 85fd07691b6294ba94c59dbc62380410 ""
-  "hw.aux" 1743294510.35631 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "hw.tex" 1743294509.21318 4871 fcf324b6db0caec35a1e51e2b005e703 ""
+  "hw.aux" 1743490435.42967 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "hw.tex" 1743490435.1141 8189 024dc25c101d84cc1ee6eb7fb7749d4d ""
   (generated)
   "hw.aux"
   "hw.log"

@@ -29,72 +29,134 @@ For $t<0$, the capacitor and inducotr are in a steady state at 0 as the circuit 
 \begin{center}
     \includegraphics[scale=0.15]{/Users/bryansebaraj/Downloads/IMG_169210321C82-1.jpeg}
 \end{center}
-
-\[
-    \frac{V_o - \frac{10}{s+1}}{s} + \frac{2s(V_o - 0)}{1} + \frac{V_o - 0}{4} - \frac{3}{s} = 0
-\]
-
-\[
-\left( \frac{1}{s} + 2s + \frac14 \right)V_o = \frac{10}{s(s+1)} + \frac{3}{s}
-\]
-
-Solving for $V_o$ yields
-
-\[
-2 \left( \frac{s^2 + 0.125s + 0.5}{s} \right)V_o = \frac{3s + 13}{s(s+1)}
-\]
-\[
-V_o = \frac{1.5s + 6.5}{(s^2 + 0.125s + 0.5)(s+1)}
-\]
-
-Find the roots of $s^2 + 0.125s + 0.5$,
-
-\[
-s_{1,2} = \frac{-0.125 \pm \sqrt{0.015625 - 2}}{2} = \frac{-0.125 \pm \sqrt{-1.984375}}{2} = -0.0625 \pm j0.70435
-\]
-
-Substituting those roots back into $V_o$ yields
-
-\[
-V_o = \frac{1.5s + 6.5}{(s + 1)(s + 0.0625 + j0.70435)(s + 0.0625 - j0.70435)}
-\]
-
-\[
-= \frac{A}{s + 1} + \frac{B}{s + 0.0625 + j0.70435} + \frac{C}{s + 0.0625 - j0.70435}
-\]
-
-where
-\[
-A = \frac{1.5s + 6.5}{(s + 0.0625 + j0.70435)(s + 0.0625 - j0.70435)}\Bigg|_{s = -1} = \frac{5}{1.375} = 3.636
-\]
-
-\[
-B = \frac{(1.5(-0.0625 + j0.70435) + 6.5)}{(-0.0625 + j0.70435 + 1)(-1.4087)} = \frac{6.40625 - j1.08625}{(0.9375 + j0.70435)(-1.4087)}
-\]
-
-\[
-= \frac{(6.49272 \angle -9.36497^\circ)}{(1.17261 \angle 36.9178^\circ)(1.4087 \angle -90^\circ)} = 3.9306 \angle 117.553^\circ
-\]
-
-\[
-C = \frac{(1.5(-0.0625 - j0.70435) + 6.5)}{(-0.0625 - j0.70435 + 1)(-1.4087)} = \frac{6.40625 + j1.056525}{(0.9375 - j0.70435)(-1.4087)}
-\]
-
-\[
-= \frac{6.49272 \angle 9.36497^\circ}{(1.17261 \angle -36.9178^\circ)(1.4087 \angle 90^\circ)} = 3.9306 \angle -117.553^\circ
-\]
-
-Thus,
-
-\[
-v_o(t) = (3.636 e^{-t} + 3.9306 e^{-0.0625t}e^{j117.559^\circ} e^{-j0.7044t} + 3.9306 e^{-0.0625t}e^{-j117.559^\circ} e^{j0.7044t})u(t) \text{ V}
-\]
+%
+% \[
+%     \frac{V_o - \frac{10}{s+1}}{s} + \frac{2s(V_o - 0)}{1} + \frac{V_o - 0}{4} - \frac{3}{s} = 0
+% \]
+%
+% \[
+% \left( \frac{1}{s} + 2s + \frac14 \right)V_o = \frac{10}{s(s+1)} + \frac{3}{s}
+% \]
+%
+% Solving for $V_o$ yields
+%
+% \[
+% 2 \left( \frac{s^2 + 0.125s + 0.5}{s} \right)V_o = \frac{3s + 13}{s(s+1)}
+% \]
+% \[
+% V_o = \frac{1.5s + 6.5}{(s^2 + 0.125s + 0.5)(s+1)}
+% \]
+%
+% Find the roots of $s^2 + 0.125s + 0.5$,
+%
+% \[
+% s_{1,2} = \frac{-0.125 \pm \sqrt{0.015625 - 2}}{2} = \frac{-0.125 \pm \sqrt{-1.984375}}{2} = -0.0625 \pm j0.70435
+% \]
+%
+% Substituting those roots back into $V_o$ yields
+%
+% \[
+% V_o = \frac{1.5s + 6.5}{(s + 1)(s + 0.0625 + j0.70435)(s + 0.0625 - j0.70435)}
+% \]
+%
+% \[
+% = \frac{A}{s + 1} + \frac{B}{s + 0.0625 + j0.70435} + \frac{C}{s + 0.0625 - j0.70435}
+% \]
+%
+% where
+% \[
+% A = \frac{1.5s + 6.5}{(s + 0.0625 + j0.70435)(s + 0.0625 - j0.70435)}\Bigg|_{s = -1} = \frac{5}{1.375} = 3.636
+% \]
+%
+% \[
+% B = \frac{(1.5(-0.0625 + j0.70435) + 6.5)}{(-0.0625 + j0.70435 + 1)(-1.4087)} = \frac{6.40625 - j1.08625}{(0.9375 + j0.70435)(-1.4087)}
+% \]
+%
+% \[
+% = \frac{(6.49272 \angle -9.36497^\circ)}{(1.17261 \angle 36.9178^\circ)(1.4087 \angle -90^\circ)} = 3.9306 \angle 117.553^\circ
+% \]
+%
+% \[
+% C = \frac{(1.5(-0.0625 - j0.70435) + 6.5)}{(-0.0625 - j0.70435 + 1)(-1.4087)} = \frac{6.40625 + j1.056525}{(0.9375 - j0.70435)(-1.4087)}
+% \]
+%
+% \[
+% = \frac{6.49272 \angle 9.36497^\circ}{(1.17261 \angle -36.9178^\circ)(1.4087 \angle 90^\circ)} = 3.9306 \angle -117.553^\circ
+% \]
+%
+% Thus,
+%
+% \[
+% v_o(t) = (3.636 e^{-t} + 3.9306 e^{-0.0625t}e^{j117.559^\circ} e^{-j0.7044t} + 3.9306 e^{-0.0625t}e^{-j117.559^\circ} e^{j0.7044t})u(t) \text{ V}
+% \]
 %
 % or
 %
 % \[
 % [3.636 e^{-t} + 7.862 e^{-0.0625t} \cos(0.7044t - 117.55^\circ)]u(t) \text{ volts}
 % \]
+The s-domain equation for KCL at the node $v_o$ is:
+$$\frac{v_o(s) - \frac{10}{s+1}}{s} + \frac{v_o(s)}{4} + 2s\cdot v_o(s) = \frac{3}{s}$$
+
+$$\frac{v_o(s)}{s} - \frac{10}{s(s+1)} + \frac{v_o(s)}{4} + 2s\cdot v_o(s) = \frac{3}{s}$$
+
+Multiply all terms by $s$,
+$$v_o(s) - \frac{10}{s+1} + \frac{s\cdot v_o(s)}{4} + 2s^2\cdot v_o(s) = 3$$
+
+$$v_o(s) + \frac{s\cdot v_o(s)}{4} + 2s^2\cdot v_o(s) = 3 + \frac{10}{s+1}$$
+
+$$v_o(s)\left(1 + \frac{s}{4} + 2s^2\right) = 3 + \frac{10}{s+1}$$
+
+$$1 + \frac{s}{4} + 2s^2 = \frac{4 + s + 8s^2}{4} = \frac{8s^2 + s + 4}{4}$$
+
+Therefore,
+$$v_o(s) = \frac{3 + \frac{10}{s+1}}{\frac{8s^2 + s + 4}{4}}$$
+$$v_o(s) = \frac{4\left(3 + \frac{10}{s+1}\right)}{8s^2 + s + 4}$$
+$$v_o(s) = \frac{12 + \frac{40}{s+1}}{8s^2 + s + 4}$$
+
+$$\frac{12 + \frac{40}{s+1}}{8s^2 + s + 4} = \frac{12}{8s^2 + s + 4} + \frac{40}{(s+1)(8s^2 + s + 4)}$$
+
+$ \frac{12}{8s^2 + s + 4}$, can be expressed as
+$$\frac{12}{8s^2 + s + 4} = \frac{Ds + E}{\left(s + \frac{1}{16}\right)^2 + \frac{127}{256}}$$
+
+$$\frac{40}{(s+1)(8s^2 + s + 4)} = \frac{A}{s+1} + \frac{Bs + C}{\left(s + \frac{1}{16}\right)^2 + \frac{127}{256}}$$
+
+% Step 5: Find the coefficients
+Finding the denominator factors,
+$$8s^2 + s + 4 = 8\left(s^2 + \frac{s}{8} + \frac{1}{2}\right)$$
+
+$$s^2 + \frac{s}{8} + \frac{1}{2} = \left(s + \frac{1}{16}\right)^2 + \frac{1}{2} - \frac{1}{256} = \left(s + \frac{1}{16}\right)^2 + \frac{127}{256}$$
+
+$$8s^2 + s + 4 = 8\left(\left(s + \frac{1}{16}\right)^2 + \frac{127}{256}\right) = 8\left(s + \frac{1}{16}\right)^2 + \frac{127}{32}$$
+
+Solving for $A$, $B$, and $C$,
+$$40 = A\left(8\left(-1 + \frac{1}{16}\right)^2 + \frac{127}{32}\right) = A\left(8\cdot\frac{225}{256} + \frac{127}{32}\right)$$
+$$40 = A\left(\frac{225}{32} + \frac{127}{32}\right) = A\left(\frac{352}{32}\right) = 11A$$
+$$A = \frac{40}{11}$$
+
+% $$\text{Through a lengthy process of comparing coefficients, we get:}$$
+$$B = -\frac{40}{11}$$
+$$C = \frac{864}{11\sqrt{127}}$$
+
+% Step 6: Write the partial fraction expansion
+% $$\text{Write the partial fraction expansion:}$$
+$$v_o(s) = \frac{40}{11}\frac{1}{s+1} + \frac{-40}{11}\frac{s}{\left(s + \frac{1}{16}\right)^2 + \frac{127}{256}} + \frac{864}{11\sqrt{127}}\frac{1}{\sqrt{\left(s + \frac{1}{16}\right)^2 + \frac{127}{256}}}$$
+
+% Step 7: Find the inverse Laplace transform
+Find the inverse Laplace transform of each term:
+$$\frac{40}{11}\frac{1}{s+1} \rightarrow \frac{40}{11}e^{-t}$$
+
+$$\frac{-40}{11}\frac{s}{\left(s + \frac{1}{16}\right)^2 + \frac{127}{256}}$$
+$$\omega = \frac{\sqrt{127}}{16}, \text{ then:}$$
+$$\frac{-40}{11}\frac{s}{\left(s + \frac{1}{16}\right)^2 + \omega^2} \rightarrow \frac{-40}{11}e^{-\frac{t}{16}}\cos(\omega t)$$
+
+$$\frac{864}{11\sqrt{127}}\frac{1}{\sqrt{\left(s + \frac{1}{16}\right)^2 + \frac{127}{256}}}$$
+$$\omega = \frac{\sqrt{127}}{16}$$
+$$\frac{864}{11\sqrt{127}}\frac{1}{\sqrt{\left(s + \frac{1}{16}\right)^2 + \omega^2}} \rightarrow \frac{864}{11\sqrt{127}}e^{-\frac{t}{16}}\sin(\omega t)$$
+
+% Step 8: Combine all terms to get v_o(t)
+Combining all terms,
+$$v_o(t) = \frac{40}{11}e^{-t} - \frac{40}{11}e^{-\frac{t}{16}}\cos\left(\frac{\sqrt{127}t}{16}\right) + \frac{864}{11\sqrt{127}}e^{-\frac{t}{16}}\sin\left(\frac{\sqrt{127}t}{16}\right)$$
 
 \subsection*{16.44}
 % \includegraphics[scale=0.9]{/Users/bryansebaraj/Desktop/Screenshot 2025-03-29 at 4.25.41 PM.png}
