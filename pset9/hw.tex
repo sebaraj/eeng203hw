@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+% \usepackage{fancyhdr}
+\usepackage[a4paper, margin=0.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+% \usepackage{amsmath}
+
+\title{Week 9 Homework}
+\author{Bryan SebaRaj \\[0.7em] Professor Hong Tang \\[0.7em]  EENG 203 - Circuits and System Design}
+\date{April 8, 2025}
+\begin{document}
+
+
+\maketitle
+
+\section*{Homework for April 3, 2025}
+
+\subsection*{16.102}
+% \includegraphics[angle=270,scale=0.8]{/Users/bryansebaraj/Downloads/Prob 16.102.jpg}
+
+From the given circuit, first define node 1 as the node between $Y_1$, $Y_2$, and $Y_4$, and node 2 as the 
+node between $Y_2$, $Y_3$, and the op amp. Also see that $V_o = V_2$.
+
+\noindent Starting with node 1, 
+$$(V_{\text{in}} - V_1) Y_1 = (V_1 - V_{\text{o}}) Y_2 + (V_1 - V_{\text{o}}) Y_4$$
+$$V_{\text{in}} Y_1 = V_1(Y_1 + Y_2 + Y_4) - V_{\text{o}} (Y_2 + Y_4)$$
+
+\noindent At Node 2, $$(V_1 - V_{\text{o}}) Y_2 = (V_{\text{o}} - 0) Y_3$$
+$$V_1 Y_2 = (Y_2 + Y_3)V_{\text{o}}$$
+$$V_1 = \frac{Y_2 + Y_3}{Y_2} V_{\text{o}}$$
+$$V_{\text{in}} Y_1 = \frac{Y_2 + Y_3}{Y_2} (Y_1 + Y_2 + Y_4)V_{\text{o}} - V_{\text{o}} (Y_2 + Y_4)$$
+$$V_{\text{in}}Y_1Y_2 = V_{\text{o}}(Y_1Y_2 + Y_1Y_3 + Y_2^2 + Y_2Y_4 + Y_3Y_4 + Y_1Y_4 - Y_2^2 - Y_2Y_4)$$
+$$\frac{V_{\text{o}}}{V_{\text{in}}} = \frac{Y_1Y_2}{Y_1Y_2 + Y_1Y_3 + Y_3Y_4 + Y_1Y_4}$$
+
+\noindent Therefore, $Y_1 \text{ and } Y_2 \text{ are resistive, while } Y_3 \text{ and } Y_4 \text{ are capacitive. We can define } Y_1 = \frac{1}{R_1}, Y_2 = \frac{1}{R_2}, \\ Y_3 = sC_1, Y_4 = sC_2$
+$$\frac{V_{\text{o}}}{V_{\text{in}}} = \frac{\frac{1}{R_1R_2}}{\frac{1}{R_1R_2} + \frac{sC_1}{R_1} + \frac{sC_1}{R_2} + s^2C_1C_2}$$
+$$\frac{V_{\text{o}}}{V_{\text{in}}} = \frac{\frac{1}{R_1R_2C_1C_2}}{s^2 + s\left(\frac{R_1 + R_2}{R_1R_2C_2}\right) + \frac{1}{R_1R_2C_1C_2}}$$
+
+\noindent Mapping the given transfer function onto this equation,
+$$\frac{1}{R_1R_2C_1C_2} = 10^6$$ $$\frac{R_1 + R_2}{R_1R_2C_2} = 100$$
+
+\noindent Solving for all possible combinations of $C_1$ and $C_2$ in terms of $R_1$ and $R_2$.
+
+$$(R_1 + R_2) = 100 \cdot R_1 R_2 C_2$$
+$$R_1 R_2 C_1 C_2 = 10^{-6}$$
+
+\noindent So, 
+$$C_1 = \frac{10^{-6}}{R_1 R_2 C_2}$$
+$$\frac{R_1 + R_2}{R_1 R_2 C_2} = 100$$
+$$R_1 + R_2 = 100 \cdot R_1 R_2 C_2$$
+
+Solving for $C_2$ in terms of $R_1$ and $R_2$,
+$$C_2 = \frac{R_1 + R_2}{100 \cdot R_1 R_2}$$
+
+$$C_1 = \frac{10^{-6}}{R_1 R_2 C_2}$$
+$$ = \frac{10^{-6}}{R_1 R_2 \cdot \frac{R_1 + R_2}{100 \cdot R_1 R_2}}$$
+$$ = \frac{10^{-6} \cdot 100 \cdot R_1 R_2}{R_1 R_2 \cdot (R_1 + R_2)}$$
+$$= \frac{10^{-4}}{R_1 + R_2}$$
+
+Therefore,
+$$C_1 = \frac{10^{-4}}{R_1 + R_2}$$
+$$C_2 = \frac{R_1 + R_2}{100 \cdot R_1 R_2}$$
+
+Finding a specific solution, suppose $R_1 = R_2 = 1 $k$\Omega$.
+Therefore,
+$$C_1 = 50 \text{ nF}$$
+$$C_2 = 20 \text{ }\mu\text{F}$$
+
+
+
+\subsection*{16.103}
+% \includegraphics[scale=0.9]{/Users/bryansebaraj/Downloads/Prob 16.103.jpg}
+
+Starting with the general formula for the transfer function using admittances,
+\begin{equation*}
+\frac{V_o}{V_i} = \frac{- Y_1Y_2}{Y_2Y_3 + Y_4 (Y_1 + Y_2 + Y_3)}
+\end{equation*}
+
+Note that the admittance of the input 0.5 $\mu$F capacitor is given by $Y_1 = sC_1$, 
+the admittance of the two, 10 k$\Omega$ resistors are given by $Y_2 = Y_3 = \frac{1}{R_1}$, 
+and the admittance of the 1 $\mu$F feedback capacitor is given by $Y_4 = sC_2$.
+% When \(Y_1 = sC_1\), \(C_1 = 0.5\ \mu\text{F}\)
+% \begin{equation*}
+% Y_2 = \frac{1}{R_1}, \quad R_1 = 10\ \text{k}\Omega
+% \end{equation*}
+% \begin{equation*}
+% Y_3 = Y_2, \quad Y_4 = sC_2, \quad C_2 = 1\ \mu\text{F}
+% \end{equation*}
+Substituting these values into the transfer function,
+$$\frac{V_o}{V_i} = \frac{-sC_1/R_1}{1/R_1^2 + sC_2(sC_1 + 2/R_1)} = \frac{-sC_1R_1}{1 + sC_2R_1(2 + sC_1R_1)} $$
+$$\frac{V_o}{V_i} = \frac{-sC_1R_1}{s^2C_1C_2R_1^2 + s \cdot 2C_2R_1 + 1} $$
+$$\frac{V_o}{V_i} = \frac{-s(0.5 \times 10^{-6})(10 \times 10^3)}{s^2(0.5 \times 10^{-6})(1 \times 10^{-6})(10 \times 10^3)^2 + s(2)(1 \times 10^{-6})(10 \times 10^3) + 1} $$
+$$\frac{V_o}{V_i} = \frac{-100s}{s^2 + 400s + 2 \times 10,000}$$
+
+Therefore,
+\begin{equation*}
+a = -100, \quad b = 400, \quad c = 20,000
+\end{equation*}
+
+\end{document}
+
